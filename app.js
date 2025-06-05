@@ -19,6 +19,10 @@ app.get('/', (req, res) => {
   res.render('index', { title: 'Accueil' });
 });
 
+app.get('/', function (req, res) {
+  res.render('index', {weather: null, error: null});
+})
+
 // Démarrage du serveur
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
