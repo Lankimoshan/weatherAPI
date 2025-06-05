@@ -6,6 +6,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const app = express();
+const apiKey = process.env.API_KEY;
 
 // Middleware pour parser les formulaires
 app.use(express.urlencoded({ extended: true }));
